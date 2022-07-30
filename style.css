@@ -1,0 +1,83 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    
+}
+.container{
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    position: relative;
+    color: rgb(27, 41, 41);
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px rgba(128, 128, 128, 0.363);
+}
+.container::after,
+.container::before{
+    content: '';
+    width: 50px;
+    height: 5px;
+    position: absolute;
+    border-width: 7px;
+    border-style: solid;
+}
+.container::before{
+   border-color: gray transparent transparent gray;
+   top: -20px;
+   left: -20px;
+}
+.container::after{
+    border-color:transparent gray gray transparent;
+    bottom: -20px;
+    right: -20px;
+ }
+.button-ctn{
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+}
+#increment-btn{
+    padding: 10px 15px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(24, 83, 24, 0.671);
+    border: none;
+    border-radius: 5px;
+    transition:  transform .2s ease-in-out;
+    cursor: pointer;
+}
+#save-btn{
+    padding: 10px 0px;
+    border: 1px solid rgb(19, 71, 71);
+    border-radius: 5px;
+    color: rgb(19, 71, 71);
+    transition: background-color .3s ease-in-out, transform .2s ease-in-out;
+    font-weight: bold;
+}
+
+#save-btn:hover{
+    cursor: pointer;
+    background-color: rgb(19, 71, 71);
+    color: white;
+}
+#save-btn:active,
+#increment-btn:active{
+    transform: scale(.9,.9);
+}
+
+#delete-btn{
+    padding: 10px 0px;
+    border: none;
+    border-radius: 5px;
+    color: rgba(255, 0, 0, 0.644);
+    font-weight: bold;
+    background-color: rgba(230, 23, 23, 0.151);
+    cursor: pointer;
+}
